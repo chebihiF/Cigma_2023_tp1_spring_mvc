@@ -19,9 +19,10 @@
             <td>Email</td>
             <td>Age</td>
         </tr>
+        ${peoples.size()}
         <c:forEach items="${peoples}" var="p">
             <tr>
-                <td>${p.name}</td>
+                <td> <c:out value="${p.name}"/> </td>
                 <td>${p.email}</td>
                 <td>${p.age}</td>
             </tr>
