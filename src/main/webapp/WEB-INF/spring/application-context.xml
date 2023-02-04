@@ -10,6 +10,12 @@
 
     <context:component-scan base-package="web"/>
 
+    <bean id="personDao" class="dao.PersonDaoImpl" scope="singleton" />
+
+    <bean id="personMetier" class="metier.PersonMetierImpl">
+        <property name="dao" ref="personDao" />
+    </bean>
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="suffix" value=".jsp"/>
         <property name="prefix" value="WEB-INF/views/" />

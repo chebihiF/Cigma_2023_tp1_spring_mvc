@@ -120,7 +120,5 @@ public class PersonDaoImpl implements PersonDao {
         }finally {
             session.close();
         }
-
-        return null;
     }
 }
